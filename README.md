@@ -58,3 +58,4 @@ If the following error happen `Cannot start ChromeHeadless [] Running as root wi
 
 
 
+https://github.com/hamdifourati/cordova-android-builder/blob/master/Dockerfile a pas aidé
