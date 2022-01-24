@@ -3,6 +3,7 @@ FROM beevelop/android
 ENV NODE_VERSION=node_14.x
 ENV CORDOVA_VERSION 11.0.0
 ENV IONIC_VERSION 6.16.1
+ENV NPM_VERSION=8.2.0
 
 RUN apt-get update && apt-get install -y curl gnupg2 lsb-release git bzip2 openssh-client && \
     apt-get install -y curl git ca-certificates --no-install-recommends && \
@@ -14,6 +15,7 @@ RUN apt-get update && apt-get install -y curl gnupg2 lsb-release git bzip2 opens
     apt-get update && apt-get install -y nodejs && \
     node -v && npm -v && \
     npm install -g yarn && \
+    npm install -g npm@8.2.0 && \
     yarn -v && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
